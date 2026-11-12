@@ -40,3 +40,18 @@ $interior-color-blockout
 - 以原图和生成图的 50% 透明叠图检查位置、比例、透视和遮挡；不通过配准或局部变形掩盖误差。
 - 独立检查蓝色饱和度、中性灰色偏、墙地灰阶差、相邻体块区分及渐变。
 - 交付白模图、叠图、实际提示词及检查结论。生成模型不能保证像素级一致，应如实说明偏差。
+
+## 转换案例
+
+以下为此前实际生成的案例，图片为 768 像素预览。点击图片可查看对应文件；每例均保留实际生成提示词和未经配准的 50% 透明叠图。示例展示实际能力与偏差，并非像素级复刻或完全无光影的理想结果。
+
+| 案例 | 原图 | 白模图 | 检查与提示词 |
+|---|---|---|---|
+| 客厅 | ![客厅原图](examples/living-room/original.jpg) | ![客厅白模图](examples/living-room/blockout.jpg) | [叠图](examples/living-room/overlay.jpg) · [提示词](examples/living-room/prompt.txt) |
+| 走廊 | ![走廊原图](examples/hallway/original.jpg) | ![走廊白模图](examples/hallway/blockout.jpg) | [叠图](examples/hallway/overlay.jpg) · [提示词](examples/hallway/prompt.txt) |
+| 厨房 | ![厨房原图](examples/kitchen/original.jpg) | ![厨房白模图](examples/kitchen/blockout.jpg) | [叠图](examples/kitchen/overlay.jpg) · [提示词](examples/kitchen/prompt.txt) |
+
+- **客厅**：壁炉整体实心化、两侧座椅抽象占位。地毯远边、座椅及装饰体块仍存在局部偏移；植物和落地灯仍有分段，未完全达到每件装饰一个方体的要求。
+- **走廊**：保留长地毯收敛与远端座椅的尺度关系；栏杆被概括为整块矮墙，局部家具和植物轮廓与原图有差异。
+- **厨房**：橱柜、水槽与灶具合并为连续 L 形整体，地毯斜向投影基本接近；少量饰物已归并或省略。
+- 三例的蓝色地毯内部代表点饱和度约 84%–87%，仍可观察到轻微渐变或面间明暗。叠图用于目视核对占位，不代表所有家具均精确重合。
